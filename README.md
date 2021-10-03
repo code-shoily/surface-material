@@ -21,5 +21,6 @@ end
 * Install the JS libs with `cd assets; yarn`
 * `mix esbuild default` to get the assets in the `catalogue` repository. (Make sure you're in the project directory. Type `cd ..` if you're still inside `assets` from the previous step)
 * `mix dev` to run the development server for the catalogue
+* Make changes to the components and test the API out in `http://localhost:4001` via examples or playgrounds.
 
 
