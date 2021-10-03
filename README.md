@@ -1,6 +1,6 @@
 # SurfaceMaterial
 
-**TODO: Add description**
+A [Materialize](https://materializecss.github.io/materialize/) wrapper for [Surface UI](https://materializecss.github.io/materialize/).
 
 ## Installation
 
@@ -15,7 +15,11 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/surface_material](https://hexdocs.pm/surface_material).
+## Development
+
+* Install the deps with `mix deps.get`
+* Install the JS libs with `cd assets; yarn`
+* `mix esbuild default` to get the assets in the `catalogue` repository. (Make sure you're in the project directory. Type `cd ..` if you're still inside `assets` from the previous step)
+* `mix dev` to run the development server for the catalogue
+
 
