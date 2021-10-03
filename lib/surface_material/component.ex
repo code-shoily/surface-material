@@ -5,7 +5,8 @@ defmodule SurfaceMaterial.Component do
   defmacro __using__(_) do
     quote do
       use Surface.Component
-      use SurfaceMaterial.Props.{Colors, Helpers}
+      use SurfaceMaterial.Props.Colors
+      use SurfaceMaterial.Props.Helpers
 
       @doc """
       Additional classes
@@ -17,7 +18,7 @@ defmodule SurfaceMaterial.Component do
       """
       prop opts, :keyword, default: []
 
-      def classes(assigns) do
+      def base_classes(assigns) do
         color_classes(assigns) ++ helper_classes(assigns) ++ assigns.class
       end
     end

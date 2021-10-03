@@ -2,11 +2,10 @@ defmodule SurfaceMaterial.Props.Helpers do
   @moduledoc """
   Helper props for various functionalities.
 
-  See Materialize documentation for alignment, content hiding, formatting: https://materializecss.github.io/materialize/helpers.html
+  See Materialize documentation for alignment & content hiding: https://materializecss.github.io/materialize/helpers.html
   See Materialize documentation for shadow: https://materializecss.github.io/materialize/shadow.html
-  See Materialize documentation for typography: https://materializecss.github.io/materialize/typography.html
   """
-  def __using__(_) do
+  defmacro __using__(_) do
     quote do
       @hide_or_show_sizes ~w/
         all
@@ -43,11 +42,6 @@ defmodule SurfaceMaterial.Props.Helpers do
       prop show, :string, values: @hide_or_show_sizes
 
       @doc """
-      Should we truncate the text?
-      """
-      prop truncate, :boolean
-
-      @doc """
       Is this component hoverable?
       """
       prop hoverable, :boolean
@@ -56,11 +50,6 @@ defmodule SurfaceMaterial.Props.Helpers do
       Fallback to browser defaults
       """
       prop browser_default, :boolean
-
-      @doc """
-      Use flow text on this component?
-      """
-      prop flow_text, :boolean
 
       @doc """
       Shadow level of this component
@@ -81,12 +70,11 @@ defmodule SurfaceMaterial.Props.Helpers do
           "show-on-med-only": assigns.show == "medium",
           "show-on-med-and-up": assigns.show == ">medium",
           "show-on-med-and-down": assigns.show == "<medium",
-          truncate: assigns.truncate,
           hoverable: assigns.hoverable,
           "browser-default": assigns.browser_default,
-          "flow-text": assigns.flow_text,
           "z-depth-#{assigns.shadow}": assigns.shadow
         )
+        |> List.wrap()
       end
     end
   end

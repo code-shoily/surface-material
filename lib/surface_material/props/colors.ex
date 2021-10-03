@@ -69,6 +69,7 @@ defmodule SurfaceMaterial.Props.Colors do
           "text-darken-#{assigns.text_darken}": assigns.text_darken,
           "text-lighten-#{assigns.text_lighten}": assigns.text_lighten
         )
+        |> List.wrap()
       end
     end
   end
