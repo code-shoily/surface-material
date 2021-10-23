@@ -63,8 +63,8 @@ defmodule SurfaceMaterial.Props.Colors do
       defp color_classes(assigns) do
         Surface.css_class(
           "#{assigns.background_color}": assigns.background_color,
-          "darken-#{assigns.text_darken}": assigns.background_darken,
-          "lighten-#{assigns.text_lighten}": assigns.background_lighten,
+          "darken-#{assigns.background_darken}": assigns.background_darken,
+          "lighten-#{assigns.background_lighten}": assigns.background_lighten,
           "#{assigns.text_color}-text": assigns.text_color,
           "text-darken-#{assigns.text_darken}": assigns.text_darken,
           "text-lighten-#{assigns.text_lighten}": assigns.text_lighten
