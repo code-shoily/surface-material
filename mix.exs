@@ -46,14 +46,14 @@ defmodule SurfaceMaterial.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 1.6.0-rc.0", only: [:dev, :test], runtime: false},
-      {:esbuild, "~> 0.2", only: [:dev, :test]},
+      {:credo, "~> 1.6.0-rc.1", only: [:dev, :test], runtime: false},
+      {:esbuild, "~> 0.3", only: [:dev, :test]},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:floki, "~> 0.31.0", only: :test},
-      {:jason, "~> 1.2.0"},
-      {:surface, "~> 0.5.0"},
-      {:surface_formatter, "~> 0.5.0", only: :dev},
-      {:surface_catalogue, "~> 0.1.0", only: :dev}
+      {:floki, "~> 0.32", only: :test},
+      {:jason, "~> 1.2"},
+      {:surface, "~> 0.6"},
+      {:surface_formatter, "~> 0.6", only: :dev},
+      {:surface_catalogue, "~> 0.2", only: :dev}
     ]
   end
 end
