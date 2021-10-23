@@ -36,3 +36,5 @@ npm-debug.log
 
 # Ignore the `priv/assets`
 /priv/catalogue/assets/
+
+my_gen/
